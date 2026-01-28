@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #e9eef5;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Conteneur */
+.container {
+  width: min(1000px, 92%);
+  margin: auto;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 15, 20, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.burger {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  opacity: 0.85;
+}
+
+/* Sections */
+.section {
+  padding: 50px 0;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Bouton */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  font-weight: bold;
+}
+
+/* Formulaire */
+.form {
+  max-width: 500px;
+  display: grid;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 4%;
+    background: #0b0f14;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
